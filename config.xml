@@ -15,27 +15,17 @@
   <preference name="android-installLocation" value="auto"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="3000" />  
-    <plugin name="cordova-plugin-whitelist" spec="1.3.0" />
-<!--    <plugin name="org.apache.cordova.device" source="pgb" spec="0.3.0" />
-    <plugin name="org.apache.cordova.media" source="pgb" spec="0.2.16" />
-    <plugin name="org.apache.cordova.network-information" source="pgb" spec="0.2.15" />
-    <plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" /> -->
-    
-    <plugin name="cordova-plugin-device" source="npm" spec="0.3.0" />
-    <plugin name="cordova-plugin-media" source="npm" spec="0.2.16" />
-    <plugin name="cordova-plugin-network-information" source="npm" spec="0.2.15" />
-    <plugin name="cordova-plugin-splashscreen" source="npm" spec="1.0.0" />  
-    
-    <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
+    <plugin name="cordova-plugin-whitelist" spec="1.3.2" />
+    <plugin name="cordova-plugin-device" source="npm" spec="1.1.5" />
+    <plugin name="cordova-plugin-media" source="npm" spec="3.0.0" />
+    <plugin name="cordova-plugin-network-information" source="npm" spec="1.3.2" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" spec="4.0.2" />      
+    <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.4">
        <param name="APP_ID" value="1235931513119062" />
             <param name="APP_NAME" value="Deal1000" />
     </gap:plugin>  
-<!--   <gap:plugin name="com.phonegap.plugins.facebookconnect">
-            <param name="APP_ID" value="647022318674855" />
-            <param name="APP_NAME" value="Deal1000" />
-   </gap:plugin>    -->
    <!--<plugin name="com.phonegap.plugins.pushplugin" source="pgb" />-->
-   <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.8.1">
+   <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.10.0">
         <param name="SENDER_ID" value="267514034297" />
     </gap:plugin>
 <!--  <plugin name="phonegap-plugin-push" spec="1.6.0">
