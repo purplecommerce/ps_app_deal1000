@@ -114,7 +114,7 @@
         <script type="text/javascript" src="cordova.js"></script>  
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            var app_version='1.1.4';
+            var app_version='1.1.5';
             
             var is_notyfy=false;
 			document.addEventListener("deviceready", onDeviceReady, false);
@@ -126,7 +126,6 @@
 			}
 			
 			function onDeviceReady() {
-                            alert('inside onDeviceReady fn');
 				checkConnection();
 				document.addEventListener("offline", onOffline, false);
 				db.transaction(populateDB, errorCB, successCB);
@@ -141,7 +140,7 @@
 				
 				var push = PushNotification.init({
 					"android" : {
-						"senderID" : "267514034297",
+						"senderID" : "947508086946",
 						"icon" : "phonegap",
 						"iconColor" : "blue"
 					},
@@ -221,9 +220,6 @@
 			}
 
 			function getDeviceId(deviceId, email, password) {//alert(deviceId);
-                            
-                            alert('inside getDeviceId fn..deviceId='+deviceId+'email='+email+'password='+password);
-                            
 				db.transaction(function(tx) {
 
 					//create table
@@ -541,7 +537,7 @@
 			}
 
 			function jsoncallbackConnectedByEmail(data) {
-				alert('inside jsoncallbackConnectedByEmail Recieved..');
+				//alert('Recieved');
 				var email = window.localStorage.getItem("email");
 				var password = window.localStorage.getItem("password");
 				var deviceId = window.localStorage.getItem("deviceId");
@@ -563,7 +559,7 @@
 			}
 
 			function loadIframe(email) {
-				alert('inside loadIframe fn..');
+				//alert('loadIframe');
 				$(".loading_mask").css("display", "block");
 				$(".loader-div").css("display", "block");
 				$('.loader-iframe').css("display", "block");
@@ -584,11 +580,7 @@
 				var datetime = window.localStorage.getItem("datetime");
 				//setiFrame's SRC attribute
 				var iFrameWin = document.getElementById(iframeID);
-				var a = iframeURL + "?email=" + email + "&password=" + password + "&deviceId=" + deviceId+ "&device_os=" + device_os+ "&device_os_version=" + device_os_version+"&device_manufacture=" + device_manufacture+"&device_model="+device_model+"&currentdate="+datetime+"&app_version="+app_version+"&device_uuid="+device_uuid;
-                                alert('inside loadIframe a='+a);		
-
-                                iFrameWin.src = a;
-                              //  iFrameWin.src = 'http://www.deal1000.com';
+				iFrameWin.src = iframeURL + "?email=" + email + "&password=" + password + "&deviceId=" + deviceId+ "&device_os=" + device_os+ "&device_os_version=" + device_os_version+"&device_manufacture=" + device_manufacture+"&device_model="+device_model+"&currentdate="+datetime+"&app_version="+app_version+"&device_uuid="+device_uuid;
 				//alert(iFrameWin.src);
 			}
 
